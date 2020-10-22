@@ -1,14 +1,4 @@
-require("events").EventEmitter.defaultMaxListeners = 200;
-const http = require("http");
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://ho-ho1.glitch.me/`);
-}, 280000);
+
 
 ////بكجات
 const { Client, RichEmbed } = require("discord.js");
