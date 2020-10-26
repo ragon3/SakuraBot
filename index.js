@@ -67,7 +67,8 @@ __الاوامر العامه__
 **  Moderation Commands.**
 
     ${prefix}kick : طرد عضو
-    ${prefix}ban :  لطرد عضو
+    ${prefix}n
+:  لطرد عضو
     ${prefix}mute : ميوت كتابي
     ${prefix}unmute : لازاله ميوت كتابي 
     ${prefix}lock : قفل الشات
@@ -542,7 +543,7 @@ client.on('message', message => {
   let reason = message.content.split(" ").slice(2).join(" ");
   /*let b5bzlog = client.channels.find("name", "5bz-log");
   if(!b5bzlog) return message.reply("I've detected that this server doesn't have a 5bz-log text channel.");*/
-  if (message.mentions.users.size < 1) return message("** ** **Examples: :**' , [`» $ban ` + '[ @User ] [ time ends with m,h,d,mo,y ] [ reason ]");
+  if (message.mentions.users.size < 1) return message.reply("** ** **Examples: :**' , [`» $ban ` + '[ @User ] [ time ends with m,h,d,mo,y ] [ reason ]");
   if(!reason) return;
   if (!message.guild.member(user)
   .bannable) return message.reply("**This person has a grade higher than his bot rank**");
